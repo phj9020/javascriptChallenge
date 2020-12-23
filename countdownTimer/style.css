@@ -1,0 +1,48 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+    margin: 0;
+    background: url(/iamge/snow1.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+h1{
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+
+.countdown-container{
+    width: auto;
+    display: flex;
+}
+
+div.days-c,
+div.hours-c,
+div.mins-c,
+div.seconds-c{
+    width:auto;
+    text-align: center;
+    margin: 0px 20px;
+}
+
+
+
+p.big-text{
+    width:100%;
+    font-weight: 400;
+    font-size: 5rem;
+    margin: 0px;
+}
+
+span {
+    font-size: 1.5rem;
+}

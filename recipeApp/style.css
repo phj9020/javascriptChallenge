@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+    margin: 0;
+    min-height:100vh;
+    background-color: #ece9e6;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.mobile_container{
+    width:400px;
+    background-color: white;
+    box-shadow: 0 0 10px #3333331a;
+    border-radius:3px;
+    overflow:hidden;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding: 0.5rem 1rem;
+}
+
+header input {
+    background-color:#eee;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+}
+header button {
+    background-color: transparent;
+    color: #aaa;
+    font-size: 1.4rem;
+    border: none;
+    margin-left: 10px;
+}
+
+h3{
+    margin-top: 0px;
+}
+
+.fav-container {
+    width: 100%;
+    height: 200px;
+    padding: 1rem 0;
+    text-align: center;
+    background-color:#f7f9ff;
+}
+
+ul.favorite-meals{
+    width:150%;
+    display: flex;
+    list-style-type: none;
+    padding:0 1rem;
+}
+
+.favorite-meals li {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin-right: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+button.clear{
+    background-color:transparent;
+    position:absolute;
+    opacity: 0;
+    right: 0px;
+    top: -5px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.favorite-meals li:hover button.clear{
+    opacity:1;
+}
+
+.favorite-meals li span {
+    width:100px;
+    height:50px;
+    font: normal 0.7rem "Poppins";
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.favorite-meals li:hover span{
+    white-space: normal;
+    overflow: none;
+}
+
+.favorite-meals li img {
+    width: 70px;
+    object-fit: cover;
+    border-radius:50%;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px 2px #3333331a;
+}
+
+/* random recipe */
+.meals-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.meal{
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    margin: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.meal-header{
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.meal-header .random {
+    position: absolute;
+    left: 0px;
+    top: 1rem;
+    background-color: white;
+    color: black;
+    padding: 0.2rem 1rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.meal-header img {
+    width:100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.meal-body{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 1rem;
+}
+.meal-body h4{
+    margin: 0;
+}
+
+.fav-button{
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color:gray;
+}
+.fav-button.active {
+    color: rebeccapurple;
+}
+.fav-button:focus{
+    outline: none;
+}
+
+.popup-container{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.popup-container.hidden{
+    opacity:0;
+    display: none;
+    /* pointer-events: none; */
+}
+
+.popup{
+    max-width: 600px;
+    width:100%;
+    height: 90%;
+    background-color:white;
+    padding: 0 1.5rem;
+    border-radius:10px;
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow:auto;
+}
+
+
+button#close-poptup{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    background: transparent;
+    color: purple;
+    cursor: pointer;
+}
+
+
+h1.meal-title{
+    text-align: center;
+}
+p.meal-instruction{
+    text-align: justify;
+}
+
